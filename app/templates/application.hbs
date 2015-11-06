@@ -1,3 +1,49 @@
-<h2 id="title">Welcome to Ember</h2>
+<div id="mainLogo">
+	<img src="/assets/images/nerd-fonts-logo.png" alt="Nerd Fonts" />
+</div>
 
 {{outlet}}
+
+<!-- iterate through font images here -->
+
+<div class="row">
+  <div class="col-lg-6">
+    <div class="input-group">
+<div class="dropdown">
+  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+    Font
+    <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+    <li><a href="#">3270</a></li>
+	 <!-- Anonymous Pro (Anonymice) -->
+    <li><a href="#"><img src="/assets/images/font-previews/anonymous-pro.png" /></a></li>
+    <li><a href="#">Aurulent Sans Mono</a></li>
+    <li><a href="#">Bitstream Vera Sans Mono</a></li>
+  </ul>
+</div>
+
+<!-- iterate through options here: -->
+
+        Mono <input type="checkbox" aria-label="..."><br/>
+        Windows Compatibility <input type="checkbox" aria-label="...">
+    </div><!-- /input-group -->
+  </div><!-- /.col-lg-6 -->
+</div><!-- /.row -->
+
+<span class="label label-default">Default</span>
+<span class="label label-primary">Primary</span>
+<span class="label label-success">Success</span>
+<span class="label label-info">Info</span>
+<span class="label label-warning">Warning</span>
+<span class="label label-danger">Danger</span>
+
+<!-- download section -->
+
+<br/><br/>
+
+glyphicon glyphicon-download-alt
+
+<button type="button" class="btn btn-default btn-lg alert-success">
+  <span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span> Download
+</button>
