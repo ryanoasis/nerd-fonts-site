@@ -1,15 +1,15 @@
-<div id="mainLogo">
+<div class="container">
+<div id="mainLogo" class="text-center">
 	<img src="/assets/images/nerd-fonts-logo.png" alt="Nerd Fonts" />
 </div>
+<br/>
+<br/>
 
-{{outlet}}
 
 <!-- iterate through font images here -->
 
-<div class="row">
-  <div class="col-lg-6">
-    <div class="input-group">
-<div class="dropdown">
+<div class="jumbotron">
+<div class="dropdown text-center">
   <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
     Select Font
     <span class="caret"></span>
@@ -21,31 +21,46 @@
     <li><a href="#">Aurulent Sans Mono</a></li>
     <li><a href="#">Bitstream Vera Sans Mono</a></li>
   </ul>
-</div>
+  </div>
+	<h4>Configuration Options</h4>
 
 <!-- iterate through options here: -->
 
-        Mostly Mono <b class="glyphicon glyphicon-question-sign" title="only the 'icons' are double width"></b> <input type="radio" name="mono" value="no" checked="checked" />
-		  True Mono <b class="glyphicon glyphicon-question-sign" title="work in terminals that limit to Mono only fonts"></b><input type="radio" name="mono" value="yes" aria-label="..." /><br/>
-        Windows Compatibility <span class="label label-warning">Warning</span><input type="checkbox" aria-label="...">
+		<label>Glyph width:</label> <input type="checkbox" name="mono" />
+		<label>Windows Compatibility:</label> <input type="checkbox" name="windows" />
+		<br/><br/>
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">Glyph width info</h3>
+  </div>
+  <div class="panel-body">
+		  <ul>
+			<li>Double - Glyphs are double width (Font is <b>not</b> 100% monospaced because the patched glyphs will be double width. Use this option if you want the best looking setup.</li>
+			<li>Single - Glyphs are single width (Font is absolutely mono [fixed width]). Use this option if you are concerned about terminal emulator compatibility.</li>
+		</ul>
+  </div>
+</div>
 
-    </div><!-- /input-group -->
-  </div><!-- /.col-lg-6 -->
-</div><!-- /.row -->
+<br/><br/>
+<div class="text-center">
+<button type="button" class="btn btn-default btn-lg alert-success">
+  <span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span> Download
+</button>
+</div>
+</div><!-- end jumbotron -->
 
-<span class="label label-default">Default</span>
+<!-- temporary reference -->
+<!--<span class="label label-default">Default</span>
 <span class="label label-primary">Primary</span>
 <span class="label label-success">Success</span>
 <span class="label label-info">Info</span>
 <span class="label label-warning">Warning</span>
-<span class="label label-danger">Danger</span>
+<span class="label label-danger">Danger</span>-->
+<!-- end temporary reference -->
 
 <!-- download section -->
 
+
 <br/><br/>
 
-glyphicon glyphicon-download-alt
-
-<button type="button" class="btn btn-default btn-lg alert-success">
-  <span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span> Download
-</button>
+</div> <!-- end container -->
