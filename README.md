@@ -1,7 +1,7 @@
-# Nerd Fonts Website
+# Nerd-fonts
 
-This is the source of the website for the [Nerd Fonts](https://github.com/ryanoasis/nerd-fonts project).
-The main goal is to make it easier to download specific variations with the secondary goal of having a nice usable frontend to represent the project. This README outlines the details of collaborating on the Nerd Fonts Website.
+This README outlines the details of collaborating on this Ember application.
+A short introduction of this app could easily go here.
 
 ## Prerequisites
 
