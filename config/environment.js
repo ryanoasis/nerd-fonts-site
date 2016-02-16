@@ -13,7 +13,8 @@ module.exports = function(environment) {
 			}
 		},
 		contentSecurityPolicy: {
-			'script-src': "'self' maxcdn.bootstrapcdn.com"
+			'script-src': "'self' maxcdn.bootstrapcdn.com api.github.com",
+			'connect-src': "'self' maxcdn.bootstrapcdn.com api.github.com"
 		},
 		APP: {
 		// Here you can pass flags/options to your application instance
