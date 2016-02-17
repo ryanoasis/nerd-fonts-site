@@ -4,7 +4,8 @@ export default Ember.Route.extend({
 	model() {
 		var _this = this;
 		var data = [];
-		Ember.$.getJSON('https://api.github.com/repos/ryanoasis/nerd-fonts/git/trees/master?recursive=1', function(response) {
+		//Ember.$.getJSON('https://api.github.com/repos/ryanoasis/nerd-fonts/git/trees/master?recursive=1', function(response) {
+		Ember.$.getJSON('', function(response) {
 			//var response = data;
 			var files = response.tree;
 			//var data = [];
@@ -12,7 +13,7 @@ export default Ember.Route.extend({
 			var i = 0;
 			var filesLength = files.length;
 
-			//for (var possible_font in files) {
+			//for (var possible_font in files)
 			for (; i < filesLength; i++) {
 				var possible_font = files[i];
 				//debugger;
@@ -23,31 +24,31 @@ export default Ember.Route.extend({
 						attributes: {
 							uri: possible_font.url,
 							size: possible_font.size,
-							name: possible_font.path.substring(possible_font.path.lastIndexOf("/")+1, possible_font.path.length)
+							name: possible_font.path.substring(possible_font.path.lastIndexOf("/") + 1, possible_font.path.length)
 						}
 					});
 					uid++;
 				}
 			}
-			/*var data = [{
-			  id: 1,
-			  type: 'font',
-			  attributes: {
-				 title: 'Fewer Moving Parts',
-				 artist: 'David Bazan',
-				 songCount: 10
-			  },
-			  relationships: {}
+			var data = [{
+				id: 1,
+				type: 'font',
+				attributes: {
+					uri: 'asdf',
+					name: 'asdf name',
+					size: 999
+				},
+				relationships: {}
 			}, {
-			  id: 2,
-			  type: 'font',
-			  attributes: {
-				 title: 'Calgary b/w I Can\'t Make You Love Me/Nick Of Time',
-				 artist: 'Bon Iver',
-				 songCount: 2
-			  },
-			  relationships: {}
-			}];*/
+				id: 2,
+				type: 'font',
+				attributes: {
+					uri: 'asdf',
+					name: 'asdf name',
+					size: 999
+				},
+				relationships: {}
+			}];
 			//console.log(data);
 			_this.store.push({
 				data: data
@@ -58,10 +59,11 @@ export default Ember.Route.extend({
 			});*/
 		}).then(function(d) {
 			//return 'hi';
-			return Ember.RSVP.hash({
+			/*return Ember.RSVP.hash({
 				release: Ember.$.getJSON('https://api.github.com/repos/ryanoasis/nerd-fonts/releases/latest'),
-				fonts: data
-			});
+				//fonts: data
+				fonts: [1, 2, 3]
+			});*/
 		});
 
 		//debugger;
@@ -74,9 +76,10 @@ export default Ember.Route.extend({
 			fonts: this.store.findAll('font')
 			//fonts: Ember.$.getJSON('https://api.github.com/repos/ryanoasis/nerd-fonts/git/trees/master?recursive=1')
 		});*/
-			/*return Ember.RSVP.hash({
-				release: Ember.$.getJSON('https://api.github.com/repos/ryanoasis/nerd-fonts/releases/latest'),
-				fonts: data
-			});*/
+		/*return Ember.RSVP.hash({
+			release: Ember.$.getJSON('https://api.github.com/repos/ryanoasis/nerd-fonts/releases/latest'),
+			fonts: data
+		});*/
+		return this.store.findAll('font');
 	}
 });
